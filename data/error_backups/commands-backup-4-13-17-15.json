@@ -1,0 +1,384 @@
+[null,{"name":"Help","permissions":"NONE","restriction":"1","actions":[{"channel":"0","varName":"","message":"```\n!Help                      Lists available commands\n!Kick [@user] [reason]     Kicks the mentioned user\n!Ban [@user] [reason]      Bans the mentioned user\n!Mute [@user]              Mutes the mentioned user\n!Unmute [@user]            Unmutes the mentioned user\n!DeleteChannel [#channel]  Deletes the mentioned channel\n!DeleteRole [#channel]     Deletes the mentioned role\n```","storage":"0","varName2":"","name":"Send Message"}],"_id":"uHTsA"},{"name":"Kick","permissions":"KICK_MEMBERS","restriction":"1","actions":[{"condition":"1","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one user in order to kick them!\n!Kick [@user] [reason]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"info":"1","infoIndex":"2","storage":"1","varName":"reason","name":"Store Command Params"},{"member":"0","varName":"","reason":"${tempVars(\"reason\") || \"\"}","name":"Kick Member"}],"_id":"bMsbS"},{"name":"Ban","permissions":"BAN_MEMBERS","restriction":"1","actions":[{"condition":"1","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one user in order to ban them!\n!Ban [@user] [reason]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"info":"1","infoIndex":"2","storage":"1","varName":"reason","name":"Store Command Params"},{"member":"0","varName":"","reason":"${tempVars(\"reason\") || \"\"}","name":"Ban Member"}],"_id":"iRERV"},{"name":"Mute","permissions":"MUTE_MEMBERS","restriction":"1","actions":[{"condition":"1","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one user in order to mute them!\n!Mute [@user]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"member":"0","varName":"","mute":"0","name":"Set Member Mute"}],"_id":"mZEuI"},{"name":"Unmute","permissions":"MUTE_MEMBERS","restriction":"1","actions":[{"condition":"1","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one user in order to unmute them!\n!Unmute [@user]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"member":"0","varName":"","mute":"1","name":"Set Member Mute"}],"_id":"NmNGr"},{"name":"DeleteChannel","permissions":"MANAGE_CHANNELS","restriction":"1","actions":[{"condition":"2","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one channel in order to delete it!\n!DeleteChannel [#channel]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"storage":"1","varName":"","name":"Delete Channel"}],"_id":"AvOTX"},{"name":"DeleteRole","permissions":"MANAGE_ROLES","restriction":"1","actions":[{"condition":"3","comparison":"0","value":"1","iftrue":"3","iftrueVal":"2","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"channel":"0","varName":"","message":"```\nPlease mention one role in order to delete it!\n!DeleteRole [@role]\n```","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"storage":"0","varName":"","name":"Delete Role"}],"_id":"FgesX"},{"name":"Test","permissions":"NONE","restriction":"1","_id":"JAlIy","actions":[{"channel":"0","varName":"","message":"Test","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}]}
+{
+  "name": "lol",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UdIqj",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "varName2": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "isblacklisted",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "24",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "servername12",
+      "name": "Store Server Info"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "mt",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "mdn",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "isitrandom?",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "message",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "isitrandom?",
+      "comparison": "5",
+      "value": "'random'",
+      "iftrue": "2",
+      "iftrueVal": "36",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "2",
+      "iftrueVal": "30",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "owner",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "33",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "vt",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "lis",
+      "info": "12",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "list",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "chan",
+      "name": "Store Channel Info"
+    },
+    {
+      "webhookName": "${tempVars(\"name\")}",
+      "webhookIcon": "${tempVars(\"avatar\")}",
+      "storage": "3",
+      "varName": "chan",
+      "storage2": "1",
+      "varName2": "webhook",
+      "name": "Create Webhook"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "message": "${tempVars(\"message\")}",
+      "name": "Send Message To Webhook"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "name": "Delete Webhook"
+    },
+    {
+      "channel": "7",
+      "varName": "me",
+      "message": "${member} (${tempVars(\"mt\")}) used the `lol` command.\nVictim: ${tempVars(\"vt\")}\nMessage: ${tempVars(\"message\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}. you can't use this command\nyou are blacklisted :)",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "please mention 1 user\nmultiple mentions are broken right now so you can't do lets say:\n`lolno!lol @thanos1131#6969 hello @$prefix = lolno!#2555`\nthat won't work.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "please mention a user or type `lolno!lol random <message>` to choose a random user you bot",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "message2",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "15",
+      "storage": "1",
+      "varName2": "memberlist",
+      "name": "Store Server Info"
+    },
+    {
+      "list": "7",
+      "varName": "memberlist",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "victim",
+      "name": "Get Item from List MOD"
+    },
+    {
+      "member": "2",
+      "varName": "victim",
+      "info": "18",
+      "storage": "1",
+      "varName2": "vt2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "victim",
+      "info": "12",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "victim",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "chanid",
+      "name": "Store Channel Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"chanid\")}",
+      "storage": "1",
+      "varName": "chan",
+      "name": "Find Channel"
+    },
+    {
+      "webhookName": "${tempVars(\"name\")}",
+      "webhookIcon": "${tempVars(\"avatar\")}",
+      "storage": "3",
+      "varName": "chan",
+      "storage2": "1",
+      "varName2": "webhook",
+      "name": "Create Webhook"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "message": "${tempVars(\"message2\")}",
+      "name": "Send Message To Webhook"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "name": "Delete Webhook"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "0",
+      "find": "692445232423370843",
+      "storage": "1",
+      "varName": "logsserver",
+      "name": "Find Server"
+    },
+    {
+      "server": "1",
+      "varName": "logsserver",
+      "name": "Change Server"
+    },
+    {
+      "info": "0",
+      "find": "692445232423370846",
+      "storage": "1",
+      "varName": "general",
+      "name": "Find Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "general",
+      "message": "${member} (${tempVars(\"mt\")}) used the `lol random` command.\nVictim: ${tempVars(\"vt2\")}\nMessage: ${tempVars(\"message2\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "userecho"
+  ],
+  "customData": {
+    "Command Info": {
+      "category": "Other2",
+      "description": "<user/random> <msg>` - Make <user> say something. To use random type `lolno!lol random <msg>`.",
+      "include": "Yes"
+    }
+  }
+}
+]
